@@ -35,6 +35,10 @@ img {
 }
 
 /*====  BASE ============================ */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font: 400 1rem "DM Sans", sans-serif;
   color: var(--text-color);
@@ -79,9 +83,21 @@ body {
   margin-right: 1.5rem;
 }
 
+.section .title {
+  margin-bottom: 1rem;
+}
+
 .grid {
   display: grid;
   gap: 2rem;
+}
+
+.section p strong {
+  color: var(--base-color);
+}
+
+.section header {
+  margin-bottom: 4rem;
 }
 
 .section {
@@ -260,4 +276,75 @@ nav.show .icon-close {
 
 #home .text p {
   margin-bottom: 2rem;
+}
+
+/* ABOUT */
+#about {
+  background: white;
+}
+
+#about .container {
+  margin: 0;
+}
+
+#about .image {
+  position: relative;
+}
+
+#about .image::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: var(--base-color-second);
+  position: absolute;
+  top: -8.3%;
+  right: 10%;
+  z-index: 0;
+}
+
+#about .image img {
+  position: relative;
+}
+
+#about .image img,
+#about .image::before {
+  border-radius: 0.25rem;
+}
+
+#about .text {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+#about .text h1 {
+  margin-bottom: 1rem;
+}
+
+#about .text p {
+  margin-bottom: 2rem;
+}
+
+/* Services */
+.cards.grid {
+  gap: 1.5rem;
+}
+
+.card {
+  padding: 3.625rem 2rem;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
+  border-bottom: 0.25rem solid var(--base-color);
+  border-radius: 0.25rem 0.25rem 0 0;
+  text-align: center;
+}
+
+.cards .card i {
+  font-size: 5rem;
+  color: var(--base-color);
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+.card .title {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
 }
