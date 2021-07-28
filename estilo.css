@@ -366,3 +366,41 @@ nav.show .icon-close {
   font-size: 1.5rem;
   margin-bottom: 0.75rem;
 }
+
+/* testimonials */
+
+#testimonials {
+  background: white;
+}
+
+#testimonials blockquote {
+  padding: 2rem;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 0.25rem;
+}
+
+#testimonials blockquote p span {
+  font: 700 3rem serif;
+  vertical-align: center;
+  color: var(--base-color);
+  margin-left: 0;
+}
+
+#testimonials blockquote p {
+  text-indent: 1.875rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.5rem;
+  color: var(--title-color);
+}
+
+#testimonials cite img {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 2rem;
+  object-fit: cover;
+  margin-right: 0.5rem;
+}
+#testimonials cite {
+  display: flex;
+  align-items: center;
+}
