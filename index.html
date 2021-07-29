@@ -244,10 +244,28 @@
       </section>
     </main>
 
+    <footer class="section">
+      <div class="container grid">
+        <div class="brand">
+          <a class="logo logo-alt" href="#home">beauty<span>salon</span>.</a>
+          <p>2021 Beautysalon.</p>
+          <p>All rights reserved</p>
+        </div>
+        <div class="social">
+          <a href="#"><i class="icon-instagram"></i></a>
+          <a href="#"><i class="icon-facebook"></i></a>
+          <a href="#"><i class="icon-youtube"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <a href="#home" class="back-to-top"><i class="seta-cima"></i></a>
+
     <!-- scripts -->
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="main.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script>
       const swiper = new Swiper(".swiper-container", {
         slidesPerView: 1,
@@ -257,6 +275,22 @@
         mousewheel: true,
         keyboard: true
       });
+
+      const scrollReveal = ScrollReveal({
+        origin: "top",
+        distance: "30px",
+        duration: 700,
+        reset: true
+      });
+
+      scrollReveal.reveal(
+        `#home .text, #home .image
+     #about .image, #about .text,
+     #services header, #services .card,
+     #testimonials header, #testimonials .testimonials
+     #contact .text, #contact .links`,
+        { interval: 100 }
+      );
     </script>
   </body>
 </html>
