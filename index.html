@@ -267,14 +267,31 @@
     <script src="main.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script>
-      const swiper = new Swiper(".swiper-container", {
-        slidesPerView: 1,
-        pagination: {
-          el: ".swiper-pagination"
-        },
-        mousewheel: true,
-        keyboard: true
-      });
+      atualizaSlides();
+      window.addEventListener("resize", atualizaSlides);
+
+      function slidesNumber() {
+        const viewWidth = visualViewport.width;
+        var quantidadeSlides;
+        if (viewWidth > 767) {
+          quantidadeSlides = 2;
+        } else {
+          quantidadeSlides = 1;
+        }
+
+        return quantidadeSlides;
+      }
+
+      function atualizaSlides() {
+        const swiper = new Swiper(".swiper-container", {
+          slidesPerView: slidesNumber(),
+          pagination: {
+            el: ".swiper-pagination"
+          },
+          mousewheel: true,
+          keyboard: true
+        });
+      }
 
       const scrollReveal = ScrollReveal({
         origin: "top",
